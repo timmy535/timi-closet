@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indigo Thread | Clothing Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="logo">Timi Closet</a>
+    <nav id="nav" class="nav">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <button class="cart-btn" id="cartBtn" aria-label="Cart">Cart <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Clothes dyed in confidence.</h1>
+        <p>Everyday wear made with bold indigo colours and soft, breathable fabric. Made to move with you.</p>
+        <a href="#shop" class="btn">Shop the collection</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="shop">
+      <h2>Shop</h2>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="men">Men</button>
+        <button class="filter" data-filter="women">Women</button>
+        <button class="filter" data-filter="accessories">Accessories</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-cat="men">
+          <div class="thumb"><img src="top.jpg" alt=""></div>
+          <h3>Indigo Tee</h3><p class="price">₦8,500</p>
+          <button class="add" data-name="Indigo Tee">Add to cart</button>
+        </article>
+        <article class="card" data-cat="women">
+          <div class="thumb"><img src="gown.jpg" alt=""></div>
+          <h3>Sunset Wrap Dress</h3><p class="price">₦18,000</p>
+          <button class="add" data-name="Sunset Wrap Dress">Add to cart</button>
+        </article>
+        <article class="card" data-cat="men">
+          <div class="thumb"><img src="denim.jpg" alt=""></div>
+          <h3>Straight Denim</h3><p class="price">₦15,000</p>
+          <button class="add" data-name="Straight Denim">Add to cart</button>
+        </article>
+        <article class="card" data-cat="women">
+          <div class="thumb"><img src="singlet.jpg" alt=""></div>
+          <h3>Linen Blouse</h3><p class="price">₦12,500</p>
+          <button class="add" data-name="Linen Blouse">Add to cart</button>
+        </article>
+        <article class="card" data-cat="men">
+          <div class="thumb"><img src="jacket.jpg" alt=""></div>
+          <h3>Weekend Jacket</h3><p class="price">₦25,000</p>
+          <button class="add" data-name="Weekend Jacket">Add to cart</button>
+        </article>
+        <article class="card" data-cat="accessories">
+          <div class="thumb"><img src="cap.jpg" alt=""></div>
+          <h3>Classic Cap</h3><p class="price">₦4,500</p>
+          <button class="add" data-name="Classic Cap">Add to cart</button>
+        </article>
+        <article class="card" data-cat="accessories">
+          <div class="thumb"><img src="bag.jpg" alt=""></div>
+          <h3>Canvas Tote</h3><p class="price">₦6,000</p>
+          <button class="add" data-name="Canvas Tote">Add to cart</button>
+        </article>
+        <article class="card" data-cat="women">
+          <div class="thumb"><img src="adire.jpg" alt=""></div>
+          <h3>Adire Kimono</h3><p class="price">₦20,000</p>
+          <button class="add" data-name="Adire Kimono">Add to cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <h2>Made with care, sewn locally.</h2>
+        <p>Indigo Thread started with one sewing machine and a love for deep blue dye. Today every piece is cut, dyed and stitched by a small team that cares about fit and finish.</p>
+        <ul class="facts">
+          <li>Soft, breathable cotton and linen</li>
+          <li>Sizes S to XXL</li>
+          <li>Delivery nationwide in 2 to 5 days</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Order or ask a question</h2>
+      <ul class="contact-info">
+  <li><strong>Location:</strong> Afe Babalola University, Ado-Ekiti, Ekiti State,Nigeria</li>
+  <li><strong>Email:</strong> <a href="mailto:oluwaniwanifemitemitope840@gmail.com">oluwaniwanifemitemitope840@gmail.com</a></li>
+  <li><strong>Phone:</strong> <a href="tel:+2347064183685">0706 418 3685</a></li>
+</ul>
+      <form class="form" id="contactForm">
+        <label>Your name <input type="text" id="name" required></label>
+        <label>Message <textarea id="message" rows="4" required placeholder="Which item and size do you want?"></textarea></label>
+        <button type="submit" class="btn">Send on WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Indigo Thread. All rights reserved.</p>
+  </footer>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-head">
+    <h3>Your cart</h3>
+    <button id="closeCart" aria-label="Close cart">&times;</button>
+  </div>
+  <ul id="cartItems" class="cart-items"></ul>
+  <p class="cart-total">Total: <strong id="cartTotal">₦0</strong></p>
+  <button class="btn" id="sendOrder">Send order on WhatsApp</button>
+</aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
